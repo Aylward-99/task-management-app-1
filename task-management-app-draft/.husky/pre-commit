@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🚀 Running pre-commit checks..."
+
+# Check if server has linting
+if [ -f "server/package.json" ] && grep -q '"lint"' "server/package.json"; then
+  echo "🔧 Linting server..."
+  cd server && npm run lint && cd ..
+fi
+
+# Check if client has linting
+if [ -f "client/package.json" ] && grep -q '"lint"' "client/package.json"; then
+  echo "🎨 Linting client..."
+  cd client && npm run lint && cd ..
+fi
+
+echo "✅ All checks passed!"

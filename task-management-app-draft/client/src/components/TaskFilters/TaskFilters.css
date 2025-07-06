@@ -1,0 +1,66 @@
+/* styles/TaskFilters.css */
+.filters-container {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.filter-group {
+  margin-bottom: 1rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.filter-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--gray-light);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.filter-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+.active-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  background-color: var(--gray-light);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+}
+
+.filter-chip button {
+  background: none;
+  border: none;
+  margin-left: 0.5rem;
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+.clear-all {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-weight: 500;
+  margin-left: auto;
+}
